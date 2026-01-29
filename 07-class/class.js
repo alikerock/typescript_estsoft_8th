@@ -57,7 +57,13 @@ var Admin = /** @class */ (function (_super) {
     Admin.prototype.showId = function () {
         return this.id;
     };
+    Admin.prototype.showNickName = function () {
+        //return this.nickname;// nickname User 클래스 내부에서만 접근가능
+        return this.getNickName();
+    };
     return Admin;
 }(User));
 var admin = new Admin(2, '관리자', 10);
-console.log(admin.id);
+console.log(admin.id); //2
+console.log(admin.showId()); //2
+console.log(admin.showNickName()); //
